@@ -1,0 +1,7 @@
+IF :RFD<20 and :Mining==1 THEN :Laser=1 :Collector=1 goto 2 end goto 7
+:Laser=1 :Collector=1
+:Laser=1 :Collector=1
+:Laser=1 :Collector=1
+:Laser=1 :Collector=1
+:Laser=0 :Collector=1 goto 1
+IF :Mining==1 THEN :Collector=1 else :Collector=0 end goto 1

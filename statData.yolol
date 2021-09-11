@@ -1,0 +1,20 @@
+FuelSeconds=:m_S-:m_FuelEpoch PSec=:m_S-:m_PropEpoch n="/Min" j=" Min"
+IF :FuelStart==1 THEN goto 18 end
+IF :PropStart==1 THEN goto 19 end
+IF :StartTach1==1 THEN :m_Tach1Start=:m_S :StartTach1=0 end
+IF :StopTach1==1 THEN :m_Tach1Fin=:m_S :StopTach1=0 end
+IF :StartTach2==1 THEN :m_Tach2Start=:m_S :StartTach2=0 end
+IF :StopTach2==1 THEN :m_Tach2Fin=:m_S :StopTach2=0 end
+:FuelRate=(:m_FStart-:Gen1Fuel)/FuelSeconds*60/1000*1000+n
+:PropellantRate=(:m_PStart-:Propellant)/PSec*60/1000*1000+n
+IF :m_Tach1Fin<=:m_Tach1Start THEN goto 14 end
+:TachTimer1=(:m_Tach1Fin-:m_Tach1Start)/60/60/10*10+" Hours"
+IF :m_Tach2Fin<=:m_Tach2Start THEN goto 15 end 
+:TachTimer2=(:m_Tach2Fin-:m_Tach2Start)/60/60/10*10+" Hours" goto 16
+:TachTimer1=(:m_S-:m_Tach1Start)/60/60/10*10+" Hours" goto 12
+:TachTimer2=(:m_S-:m_Tach2Start)/60/60/10*10+" Hours"
+:FuelBingo=:Gen1Fuel/((:m_FStart-:Gen1Fuel))/FuelSeconds/60/10*10+j
+:GasBingo=:Propellant/((:m_PStart-:Propellant)/PSec)/60/10*10+j goto1
+:m_FuelEpoch=:m_S :m_FStart=:Gen1Fuel :FuelStart=0 goto 3
+:m_PropEpoch=:m_S :m_PStart=:Propellant :PropStart=0 goto 4
+

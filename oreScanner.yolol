@@ -1,0 +1,5 @@
+IF :Dtr==1 THEN :OreScan=1 end n="\n" :Idx=0 IF :Rst==1 THEN goto5 end
+IF :Dtr==1 and :Vol<1 THEN :OreResults=n+"Awaiting Scan..." goto 1 end
+IF :Vol == :m_Vol THEN goto 1 end :m_Vol=:Vol :Dtr=0
+:OreResults=n+:Mat+n+:Vol :Idx=1 :OreResults+=n+:Mat+n+:Vol goto 1
+:OreReset=1 :OreResults=n+"Standby Mode" :Rst=0 :Dtr=0 goto 1
