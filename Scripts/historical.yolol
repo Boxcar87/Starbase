@@ -1,0 +1,7 @@
+IF :hRst==1 THEN goto 7 end IF :Store!=1 THEN goto 1 end a=:FuelRate 
+n="\n" b=:PropellantRate z="Fuelrate:" x="PropRate:" d=:TachTimer2
+c=:TachTimer1 i=z+n+x+n+"Timer1:"+n+"Timer2:"
+:Historical=i :Metrics=a+n+b+n+c+n+d :Store=0 :sClr=3  
+:m_FStart=:Gen1Fuel :m_PStart=:Propellant 
+:m_Tach1Start=0 :m_Tach1Fin=0 :m_Tach2Start=0 :m_Tach2Fin=0 goto 1
+u="Standby Mode" :Historical="\n"+u :Metrics="\n\n"+u :hRst=0 goto 1 

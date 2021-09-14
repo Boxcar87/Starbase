@@ -1,0 +1,4 @@
+i=-0.24 o=1.32 p=3.142 b=0.571 c=57.295 IF :Mining==0 THEN goto 4 end
+r=:RFD+i t=r/o Yaw=(b*t+t*t)/(1+2*b*t+t*t)*c*(p/2)-90
+IF Yaw < 0 and Yaw > -20 THEN :Miner2Yaw=Yaw end goto 1
+:Miner2Yaw=0 goto 1

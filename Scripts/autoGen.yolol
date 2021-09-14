@@ -1,0 +1,5 @@
+IF :Gen1==1 THEN goto 4 end :Generator1=0.001
+IF :Gen2==1 THEN goto 5 end :Generator2=0.001
+goto 1
+:Generator1=(10000-:Battery)/85+:GeneratorLimit goto 2
+:Generator2=(10000-:Battery)/85+:GeneratorLimit goto 3
