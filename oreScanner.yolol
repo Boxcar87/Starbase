@@ -1,9 +1,0 @@
-IF :Dtr==1 THEN :OreScan=1 end n="\n" :Idx=0 IF :Rst==1 THEN goto9 end
-IF :Dtr==1 and :Vol<1 THEN :OreResults=n+"Awaiting Scan..." goto 1 end
-IF :Vol==:m_Vol or :Vol==0 THEN goto 1 end 
-a=:Vol x=:Mat :Idx=1 b=:Vol y=:Mat p=100 t="<9" u=" Stacks" z=a+b
-IF z>50000 and z<198000 THEN t="9" end c="Class: "
-IF z>198000 and z<433000 THEN t="10" end
-IF z>433000 THEN t="11" end :m_Vol=a :Dtr=0
-a=a/1728/p*p+u b=b/1728/p*p+u :OreResults=c+t+n+x+n+a+n+y+n+b goto 1
-:OreReset=1 :OreResults=n+"Standby Mode" :m_Vol=0 :Rst=0 :Dtr=0 goto 1
