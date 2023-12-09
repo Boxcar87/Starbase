@@ -1,5 +1,14 @@
 MFile 1 15 480
-Trk
+
+MTrk
+
+0:0:0 SMPTE 96 0 0 0 0
+0:0:0 TimeSig 2/4 24 8
+0:0:0 KeySig -3 minor
+0:0:0 Tempo 382352
+
+MTrk
+
 0:0:0 Meta Text "Clarinet"
 0:0:0 ProgCh ch=3 prog=71
 0:0:240 On  ch=3 note=67 vol=55
@@ -8,14 +17,35 @@ Trk
 0:1:240 Off ch=3 note=67 vol=90
 0:1:240 On  ch=3 note=67 vol=55
 1:0:0   Off ch=3 note=67 vol=90
-1:0:0   On  ch=3 note=63 vol=55
-2:0:0   Off ch=3 note=63 vol=90
-2:0:240 On  ch=3 note=65 vol=55
-2:1:0   Off ch=3 note=65 vol=90
-2:1:0   On  ch=3 note=65 vol=55
-2:1:240 Off ch=3 note=65 vol=90
-2:1:240 On  ch=3 note=65 vol=55
-3:0:0   Off ch=3 note=65 vol=90
-3:0:0   On  ch=3 note=62 vol=55
-5:0:0   Off ch=3 note=62 vol=90
+1:0:0   On  ch=3 note=60 vol=55
+2:0:0   Off ch=3 note=60 vol=90
+2:0:240 On  ch=3 note=62 vol=55
+2:1:0   Off ch=3 note=62 vol=90
+2:1:0   On  ch=3 note=62 vol=55
+2:1:240 Off ch=3 note=62 vol=90
+2:1:240 On  ch=3 note=62 vol=55
+3:0:0   Off ch=3 note=62 vol=90
+3:0:0   On  ch=3 note=58 vol=55
+5:0:0   Off ch=3 note=58 vol=90
+TrkEnd
+
+MTrk
+
+0:0:0 Meta Text "Violin"
+0:0:0 ProgCh ch=8 prog=48
+0:0:240 On  ch=8 note=72 vol=99
+0:1:0   Off ch=8 note=72 vol=90
+0:1:0   On  ch=8 note=72 vol=99
+0:1:240 Off ch=8 note=72 vol=90
+0:1:240 On  ch=8 note=72 vol=99
+1:0:0   Off ch=8 note=72 vol=90
+1:0:0   On  ch=8 note=64 vol=99
+2:0:0   Off ch=8 note=64 vol=90
+2:0:240 On  ch=8 note=65 vol=99
+2:1:0   Off ch=8 note=65 vol=90
+2:1:0   On  ch=8 note=65 vol=99
+2:1:240 Off ch=8 note=65 vol=90
+2:1:240 On  ch=8 note=65 vol=99
+3:0:0   Off ch=8 note=65 vol=90
+3:0:0   On  ch=8 note=62 vol=99
 TrkEnd
